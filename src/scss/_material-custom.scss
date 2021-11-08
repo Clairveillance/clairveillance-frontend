@@ -1,0 +1,123 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "~@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// @deprecated renamed to $dark-primary-text.
+// @breaking-change 8.0.0
+$black-87-opacity: rgba(#12130f, 0.87);
+// @deprecated renamed to $light-primary-text.
+// @breaking-change 8.0.0
+$white-87-opacity: rgba(white, 0.87);
+// @deprecated use $dark-[secondary-text,disabled-text,dividers,focused] instead.
+// @breaking-change 8.0.0
+$black-12-opacity: rgba(#12130f, 0.12);
+// @deprecated use $light-[secondary-text,disabled-text,dividers,focused] instead.
+// @breaking-change 8.0.0
+$white-12-opacity: rgba(white, 0.12);
+// @deprecated use $dark-[secondary-text,disabled-text,dividers,focused] instead.
+// @breaking-change 8.0.0
+$black-6-opacity: rgba(#12130f, 0.06);
+// @deprecated use $light-[secondary-text,disabled-text,dividers,focused] instead.
+// @breaking-change 8.0.0
+$white-6-opacity: rgba(white, 0.06);
+
+$dark-teal-text: rgba(#216869, 0.87);
+$dark-primary-text: rgba(#12130f, 0.87);
+$dark-secondary-text: rgba(#12130f, 0.54);
+$dark-disabled-text: rgba(#12130f, 0.38);
+$dark-dividers: rgba(#12130f, 0.12);
+$dark-focused: rgba(#12130f, 0.12);
+$light-primary-text: white;
+$light-secondary-text: rgba(white, 0.7);
+$light-disabled-text: rgba(white, 0.5);
+$light-dividers: rgba(white, 0.12);
+$light-focused: rgba(white, 0.12);
+
+$clairveillance-primary-palette: (
+  50: #ffedef,
+  100: #ffd1d5,
+  200: #ffa09d,
+  // main = 300
+  300: #fd7b76,
+  400: #e75350,
+  500: #eb4337,
+  600: #dc3936,
+  700: #ca3030,
+  800: #bd2a2a,
+  900: #ae2020,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+  ),
+);
+
+$clairveillance-accent-palette: (
+  50: #deeeef,
+  // main = 100
+  100: #aed6d6,
+  200: #73bdbc,
+  300: #55b4b4,
+  400: #36a4a2,
+  500: #249390,
+  600: #228781,
+  700: #1f7771,
+  800: #1d6760,
+  900: #194b44,
+  contrast: (
+    50: $dark-teal-text,
+    100: $dark-teal-text,
+    200: $dark-teal-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+  ),
+);
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$clairveillance-frontend-primary: mat.define-palette(
+  $clairveillance-primary-palette,
+  300
+);
+$clairveillance-frontend-accent: mat.define-palette(
+  $clairveillance-accent-palette,
+  100
+);
+
+// The warn palette is optional (defaults to red).
+$clairveillance-frontend-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$clairveillance-frontend-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $clairveillance-frontend-primary,
+      accent: $clairveillance-frontend-accent,
+      warn: $clairveillance-frontend-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($clairveillance-frontend-theme);

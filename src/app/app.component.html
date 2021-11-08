@@ -1,0 +1,18 @@
+<div class="h-screen flex flex-row justify-between">
+  <div class="app-main--container">
+    <div
+      class="h-screen flex flex-col justify-between"
+      [class.backdrop-blur-md]="false"
+    >
+      <div>
+        <app-header></app-header>
+      </div>
+      <div class="flex-auto overflow-hidden">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="sm:hidden">
+        <app-footer></app-footer>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 {
   "name": "clairveillance-frontend",
   "version": "0.1.0",
-  "author": "Axel Duret",
+  "author": "Clairveillance",
   "license": "MIT",
   "scripts": {
     "ng": "ng",

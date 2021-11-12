@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, OnInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',

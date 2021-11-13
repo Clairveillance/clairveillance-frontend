@@ -1,4 +1,5 @@
-import { modules as fromModules, NgModule } from './app.modules.imports';
+import { NgModule } from '@angular/core';
+import { modules as fromModules } from './app.modules.imports';
 import {
   components as fromComponents,
   AppComponent,

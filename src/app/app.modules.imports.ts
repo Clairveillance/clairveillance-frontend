@@ -1,5 +1,3 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -12,12 +10,10 @@ import { AdminModule } from './admin/admin.module';
 import { SharedModule } from './shared/shared.module';
 
 export const modules: Array<any> = [
-  NgModule,
-  BrowserModule,
+  MatIconModule,
+  MatToolbarModule,
   AppRoutingModule,
   BrowserAnimationsModule,
-  MatToolbarModule,
-  MatIconModule,
 
   CoreModule,
   AuthModule,
@@ -26,11 +22,10 @@ export const modules: Array<any> = [
   SharedModule,
 ];
 
-export * from '@angular/core';
-export * from '@angular/material/icon';
-export * from './app-routing.module';
-export * from '@angular/material/toolbar';
-export * from '@angular/platform-browser/animations';
+export { MatIconModule } from '@angular/material/icon';
+export { AppRoutingModule } from './app-routing.module';
+export { MatToolbarModule } from '@angular/material/toolbar';
+export { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export * from './core/core.module';
 export * from './core/core.module';

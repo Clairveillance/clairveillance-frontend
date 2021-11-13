@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https [OR]
+    RewriteCond %{HTTP_HOST} ^www. [NC]
+    RewriteRule (.*) https://clairveillance.ch/$1 [R=301,L]
+</IfModule>
+

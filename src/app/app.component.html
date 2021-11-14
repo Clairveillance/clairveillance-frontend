@@ -1,6 +1,8 @@
 <div class="app-container" [class.is-mobile]="mobileQuery.matches">
-  <app-header (sidenav)="sidenav.toggle()"></app-header
-  ><mat-sidenav-container class="sidenav-container">
+  <div class="drop-shadow-sm z-10">
+    <app-header (sidenav)="sidenav.toggle()"></app-header>
+  </div>
+  <mat-sidenav-container class="sidenav-container">
     <mat-sidenav
       #sidenav
       [mode]="mobileQuery.matches ? 'over' : 'side'"
@@ -15,6 +17,9 @@
       <div class="flex-auto">
         <router-outlet></router-outlet>
       </div>
-    </mat-sidenav-content> </mat-sidenav-container
-  ><app-footer></app-footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <div class="border-t-2 border-red-400 z-10">
+    <app-footer></app-footer>
+  </div>
 </div>

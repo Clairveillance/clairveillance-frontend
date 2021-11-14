@@ -55,9 +55,9 @@ body {
 }
 
 .pages-home-container {
-  height: calc(var(--vh, 1vh) * 100 - 128px);
+  height: calc(var(--vh, 1vh) * 100 - 130px);
 }
 
 .is-mobile .pages-home-container {
-  height: 100px;
+  height: 0px;
 }

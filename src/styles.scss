@@ -49,6 +49,15 @@ body {
   flex: 1 0 auto;
 }
 
-.sidenav-color {
+.sidenav-content {
   color: $dark-teal-text;
+  width: 26ch;
+}
+
+.pages-home-container {
+  height: calc(var(--vh, 1vh) * 100 - 128px);
+}
+
+.is-mobile .pages-home-container {
+  height: 100px;
 }

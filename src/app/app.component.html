@@ -2,13 +2,12 @@
   <app-header (sidenav)="sidenav.toggle()"></app-header
   ><mat-sidenav-container class="sidenav-container">
     <mat-sidenav
-      style="width: 26ch"
       #sidenav
       [mode]="mobileQuery.matches ? 'over' : 'side'"
       [fixedInViewport]="mobileQuery.matches"
       fixedTopGap="56"
       fixedBottomGap="0"
-      class="sidenav-color bg-gray-50 p-2"
+      class="sidenav-content bg-gray-50 p-2"
     >
       <div class="flex-auto">Sidebar content</div>
     </mat-sidenav>

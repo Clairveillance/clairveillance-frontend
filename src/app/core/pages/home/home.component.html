@@ -1,17 +1,8 @@
 <div
-  class="
-    sm:h-5/6
-    m-3
-    sm:m-0
-    grid
-    content-main-layout
-    backdrop-blur
-    rounded-lg
-    sm:rounded-none
-    border-0
-    sm:border-2
-    border-opacity-10
+  [style.height]="
+    mobileQuery.matches ? '100px' : 'calc(var(--vh, 1vh) * 100 - 128px)'
   "
+  class="grid content-main-layout backdrop-blur border-0"
 >
   <div
     class="

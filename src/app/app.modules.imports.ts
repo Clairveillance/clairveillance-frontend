@@ -1,6 +1,8 @@
 import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 import { AppRoutingModule } from './app-routing.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CoreModule } from './core/core.module';
@@ -11,7 +13,9 @@ import { SharedModule } from './shared/shared.module';
 
 export const modules: Array<any> = [
   MatIconModule,
+  MatListModule,
   MatToolbarModule,
+  MatSidenavModule,
   AppRoutingModule,
   BrowserAnimationsModule,
 
@@ -23,8 +27,10 @@ export const modules: Array<any> = [
 ];
 
 export { MatIconModule } from '@angular/material/icon';
+export { MatListModule } from '@angular/material/list';
 export { AppRoutingModule } from './app-routing.module';
 export { MatToolbarModule } from '@angular/material/toolbar';
+export { MatSidenavModule } from '@angular/material/sidenav';
 export { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export * from './core/core.module';

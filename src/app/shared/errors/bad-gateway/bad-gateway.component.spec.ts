@@ -8,9 +8,8 @@ describe('BadGatewayComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BadGatewayComponent ]
-    })
-    .compileComponents();
+      declarations: [BadGatewayComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

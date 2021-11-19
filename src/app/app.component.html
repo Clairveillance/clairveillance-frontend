@@ -1,18 +1,25 @@
-<div class="h-screen flex flex-row justify-between">
-  <div class="app-main--container">
-    <div
-      class="h-screen flex flex-col justify-between"
-      [class.backdrop-blur-md]="false"
+<div class="app-container" [class.is-mobile]="mobileQuery.matches">
+  <div class="drop-shadow-sm z-10">
+    <app-header (sidenav)="sidenav.toggle()"></app-header>
+  </div>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav
+      #sidenav
+      [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56"
+      fixedBottomGap="0"
+      class="sidenav-content bg-gray-50 p-2"
     >
-      <div>
-        <app-header></app-header>
-      </div>
-      <div class="flex-auto overflow-hidden">
+      <div class="flex-auto">Sidebar content</div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="flex-auto">
         <router-outlet></router-outlet>
       </div>
-      <div class="sm:hidden">
-        <app-footer></app-footer>
-      </div>
-    </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <div class="border-t-2 border-red-400 z-10">
+    <app-footer></app-footer>
   </div>
 </div>

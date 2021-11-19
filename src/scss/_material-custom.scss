@@ -1,36 +1,14 @@
-@use "sass:map";
-@use "@angular/material" as mat;
-// @include mat-elevation(16);
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-// @use "~@angular/material" as mat;
-// Plus imports for other components in your app.
+@use "sass:map";
+@use "@angular/material" as mat;
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-// @include mat.core();
-
-// @deprecated renamed to $dark-primary-text.
-// @breaking-change 8.0.0
 $black-87-opacity: rgba(#12130f, 0.87);
-// @deprecated renamed to $light-primary-text.
-// @breaking-change 8.0.0
 $white-87-opacity: rgba(white, 0.87);
-// @deprecated use $dark-[secondary-text,disabled-text,dividers,focused] instead.
-// @breaking-change 8.0.0
 $black-12-opacity: rgba(#12130f, 0.12);
-// @deprecated use $light-[secondary-text,disabled-text,dividers,focused] instead.
-// @breaking-change 8.0.0
 $white-12-opacity: rgba(white, 0.12);
-// @deprecated use $dark-[secondary-text,disabled-text,dividers,focused] instead.
-// @breaking-change 8.0.0
 $black-6-opacity: rgba(#12130f, 0.06);
-// @deprecated use $light-[secondary-text,disabled-text,dividers,focused] instead.
-// @breaking-change 8.0.0
 $white-6-opacity: rgba(white, 0.06);
-
 $dark-teal-text: rgba(#216869, 0.87);
 $dark-primary-text: rgba(#12130f, 0.87);
 $dark-secondary-text: rgba(#12130f, 0.54);

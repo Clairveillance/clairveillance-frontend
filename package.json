@@ -36,7 +36,7 @@
     "@angular-eslint/eslint-plugin": "12.6.1",
     "@angular-eslint/eslint-plugin-template": "12.6.1",
     "@angular-eslint/template-parser": "12.6.1",
-    "@angular/cli": "^13.2.0",
+    "@angular/cli": "^13.3.3",
     "@angular/compiler-cli": "^13.2.0",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.4.0",
